@@ -1,0 +1,21 @@
+<div class="container tp bot" ng-cloak>
+	<div ng-show="$root.lessons">
+		<div class="col-lg-1 pull-right"></div>
+		<div class="col-lg-8 pull-right">
+			<h3><strong>#{{thelesson.lessonndx}} {{thelesson.lessontitle}}</strong></h3>
+			<p class="text-justified">{{thelesson.lessoncontent}}</p>
+			<div clss="pull-right">
+				<button class="btn btn-default" ng-click="leftarrow()" ng-disabled="!lastlesson[0].lessonid"><i class="fa fa-arrow-left"></i></button>
+				<button class="btn btn-default" ng-click="rightarrow()" ng-disabled="!nextlesson[0].lessonid"><i class="fa fa-arrow-right"></i></button>
+			</div>
+		</div>
+		<div class="col-lg-3 pull-left">
+			<ul class="list-unstyled">
+				<li ng-show="$root.lessons"><h3><strong>Lessons</strong></h3></li>
+	            <li id="" ng-repeat="lesson in $root.lessons track by $index" ng-show="$root.lessons">
+	                <h5 class=""><a href="" ng-click="gotoLesson(lesson.lessonid)">#{{lesson.lessonndx}} {{lesson.lessontitle}}</a></h5>
+	            </li>
+	        </ul>
+		</div>
+	</div>
+</div>

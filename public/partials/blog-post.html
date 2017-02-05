@@ -1,0 +1,27 @@
+<div class="container tp bot" ng-cloak>
+	<div ng-show="$root.posts">
+		<div class="col-lg-1 pull-right"></div>
+		<div class="col-lg-8 pull-right">
+			<h3><strong>{{thepost.posttitle}}</strong></h3>
+			<h5>{{thepost.postdate}}</h5>
+			<p class="text-justified">{{thepost.postcontent}}</p>
+			<div clss="pull-right">
+				<button class="btn btn-default" ng-click="leftarrow()" ng-disabled="!lastpost[0].postid"><i class="fa fa-arrow-left"></i></button>
+				<button class="btn btn-default" ng-click="rightarrow()" ng-disabled="!nextpost[0].postid"><i class="fa fa-arrow-right"></i></button>
+			</div>
+			<div class="archive-btn">
+				<div class="form-group input-group" ng-hide="$root.currentUser.id">
+	                <button class="btn-custom btn-theme btn-nofo" ng-click="signModalA()">SIGN UP</button>
+	            </div>
+	        </div>
+		</div>
+		<div class="col-lg-3 pull-left">
+			<ul class="list-unstyled">
+				<li ng-show="$root.posts"><h3><strong>Posts</strong></h3></li>
+	            <li id="" ng-repeat="post in $root.posts track by $index" ng-show="$root.posts">
+	                <h5 class=""><a href="" ng-click="gotoPost(post.postid)">{{post.postdate}}</a></h5>
+	            </li>
+	        </ul>
+		</div>
+	</div>
+</div>

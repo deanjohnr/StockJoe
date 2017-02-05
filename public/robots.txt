@@ -1,0 +1,6 @@
+# robots.txt for http://www.stockjoe.com/
+
+User-agent: *
+Disallow: /account/
+Disallow: /privacy
+Disallow: /terms

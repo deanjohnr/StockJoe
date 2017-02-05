@@ -1,0 +1,21 @@
+<div id="suppress" ng-cloak>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <div id="tickerlist" class="col-lg-12">
+                    <h3>{{myTickCode}}</h3>
+                    <h1>{{myRes}}</h1>
+                    <h3>{{myClose}}</h3>
+                    <h1>{{mySupport}}</h1>
+                    <div class="input-group">
+                        <input type="text" ng-model="myTicker" typeahead="ticker.tickerfull for ticker in tickers | filter:$viewValue | limitTo:8" class="form-control" autofocus>
+                        <span class="input-group-btn">
+                            <button class="btn btn-theme btn-nofo" type="button" ng-click="calcSupp()">ENTER</button>
+                        </span>
+                    </div>
+                    <h4><span ng-show='loadingtickers'> <small>loading tickers ...</small></span></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

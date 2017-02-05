@@ -1,0 +1,37 @@
+<div id="account" ng-cloak>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <div id="tickerlist" class="col-lg-9">
+                    <h4>ADD TICKER<span ng-show='loadingtickers'> <small>loading tickers ...</small></span><span class="pull-right" ng-show="tickerAlert">Ticker is already saved</span><span class="pull-right" ng-show="saveAlert">Saved</span></h4>
+                    <div class="input-group">
+                        <input type="text" ng-model="myTicker" typeahead="ticker.tickerfull for ticker in tickers | filter:$viewValue | limitTo:8" class="form-control" autofocus>
+                        <span class="input-group-btn">
+                            <button class="btn btn-theme btn-nofo" type="button" ng-click="addTicker()"><i class="fa fa-plus"></i></button>
+                        </span>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li id="tickeritem" ng-repeat="tick in myTickers track by $index" ng-show="myTickers.length >= 1">
+                            <h4 class="">{{tick.tickerfull}}<a class="pull-right" ng-click="delTicker($index)"><i class="fa fa-times"></i></a></h4>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <form id="sidebar">
+                        <div class="form-group input-group-lg text-left">
+                            <button class="btn-custom btn-theme btn-block" ng-hide="isEnrolled" ng-click="courseEnroll()">Enroll In Lessons</button>
+                            <button class="btn-custom btn-theme btn-block" ng-show="isEnrolled" ng-click="courseUnenroll()">Remove Lessons</button>
+                        </div>
+                        <div class="form-group input-group-lg text-left">
+                            <button class="btn-custom btn-theme btn-block" ng-click="logout()">Logout</button>
+                        </div>
+                        <div class="form-group input-group-lg text-right">
+                            <button class="btn-custom btn-theme btn-block" ng-hide="isActivated" ng-click="activate()">Activate</button>
+                            <button class="btn-custom btn-theme btn-block" ng-show="isActivated" ng-click="deactivate()">Unsubscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

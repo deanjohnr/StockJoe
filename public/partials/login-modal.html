@@ -1,0 +1,24 @@
+<div class="modal-content">
+  <div class="modal-body">
+  	<p class="text-right"><button class="btn btn-default text-right" ng-click="cancel()"><i class="fa fa-times"></i></button></p>
+    <div class="">
+        <form id="login">
+            <label for="email">Email<span class="text-danger" ng-show='loginalert'> - {{loginalert}}</span></label>
+            <div id="email" class="form-group input-group-lg">
+                <input type="email" class="form-control" placeholder="Email" ng-model="email" autofocus>
+            </div>
+            <label for="pw">Password</label>
+            <div id="pw" class="form-group input-group-lg">
+                <input type="password" class="form-control" placeholder="Password" ng-model="password">
+            </div>
+            <p ng-hide="isSignup"><a href="" ng-click="resetpw()">Reset Password</a></p>
+            <div class="form-group input-group-lg text-right">
+                <button class="btn-custom btn-theme btn-large btn-nofo" ng-disabled="!email || password.length < 8" ng-click="login()">Login</button>
+            </div>
+        </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+  	<p>Don't have an account? <a href="" ng-click="signModal()">Join Auto Stock</a></p>
+  </div>
+</div><!-- /.modal-content -->

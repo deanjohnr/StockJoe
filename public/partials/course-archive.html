@@ -1,0 +1,23 @@
+<div class="container tp" ng-cloak>
+	<div class="col-lg-8 col-lg-offset-2 text-center">
+		<h1 ng-show="courseloading">Loading . . .</h1>
+		<div ng-show="needsignup">
+			<h1>Signup To Receive Free Lessons</h1>
+			<p>We assume you know nothing about the stock market and investing. Stock Joe is the place to start investing.</p>
+			<div class="form-group input-group-lg">
+	            <button class="btn-custom btn-signup btn-large btn-nofo" ng-click="signModalL()">SIGN UP</button>
+	        </div>
+	    </div>
+	    <div ng-show="notenrolled">
+			<h1>Enroll To Receive Free Lessons</h1>
+			<p>We assume you know nothing about the stock market and investing. Stock Joe is the place to start investing.</p>
+			<div class="form-group input-group-lg">
+	            <button class="btn-custom btn-signup btn-large btn-nofo" ng-click="courseEnroll()">ENROLL</button>
+	        </div>
+	    </div>
+	    <div ng-show="nolessons">
+			<h1>Lessons Incoming</h1>
+			<p>Your lessons will go to your inbox each morning. Lessons you have already viewed will show up on this page, which you can view by clicking the LESSONS button in your daily Stock Joe email.</p>
+	    </div>
+	</div>
+</div>

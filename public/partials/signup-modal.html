@@ -1,0 +1,29 @@
+<div class="modal-content">
+  <div class="modal-body">
+  	<p class="text-right"><button class="btn btn-default text-right" ng-click="cancel()"><i class="fa fa-times"></i></button></p>
+    <div class="">
+        <form id="signup">
+            <label for="email">Email<span class="text-danger" ng-show='loginalert'> - {{loginalert}}</span></label>
+            <div id="email" class="form-group input-group-lg">
+                <input type="email" class="form-control" placeholder="Email" ng-model="email" autofocus>
+            </div>
+            <label for="pw">Password <span id="sublabel"> ( 8 character minimum )</span></label>
+            <div id="pw" class="form-group input-group-lg">
+                <input type="password" class="form-control" placeholder="Password" ng-model="password">
+            </div>
+            <div class="form-group input-group-lg text-right">
+                <div class="checkbox pull-left">
+                  <label>
+                    <input type="checkbox" ng-model="$root.isNewbie"> I want the stock market lessons
+                  </label>
+                </div>
+                <button class="btn-custom btn-theme btn-large btn-nofo" ng-disabled="!email || password.length < 8" ng-click="signup()">Sign Up</button>
+            </div>
+        </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+  	<p>Already have an account? <a href="" ng-click="logModal()">Sign In</a></p>
+    <p class="text-center">By signing up you agree to our <a href="" ui-sref="terms">Terms of Service</a> and <a href="" ui-sref="privacy">Privacy Policy</a></p>
+  </div>
+</div><!-- /.modal-content -->
