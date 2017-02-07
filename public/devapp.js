@@ -3,35 +3,6 @@ var devmod = angular.module('devMod',[]);
 devmod.controller('devCtrl', ['$rootScope', '$scope', '$state', function ($rootScope, $scope, $state) {
 
 	/*
-	var thecontent = "Every investment has a certain level of risk. Some investments are inherently more risky than others. But risk and profit are always connected. Riskier investments have the potential to make more money, but they also have the potential to lose money. Investors are always on the hunt to find investments that have the opportunity to make a lot more money than they could lose. Hedge funds (professional joe shmoe investors who make money by investing other people’s money) are masters of calculating and managing risk levels of investments to ensure larger profits than losses. This may  mean making less money and to avoid a certain level of risk."
-
-	var esccontent = unescape(encodeURIComponent(thecontent));
-
-	$scope.savecontent = function() {
-		var Lesson = Parse.Object.extend('Lessons');
-		var lquery = new Parse.Query(Lesson);
-		lquery.equalTo('LessonNumber', 10);
-		lquery.first({
-			success: function(result) {
-				result.set('LessonContent',esccontent);
-				result.save({
-					success: function () {
-						console.log('saved');
-						var mquery = new Parse.Query(Lesson);
-						mquery.equalTo('LessonNumber', 10);
-						mquery.first({
-							success: function(res) {
-								$scope.thelesson = res.get('LessonContent');
-								console.log($scope.thelesson);
-								$scope.$apply();
-							}
-						});
-					}
-				});
-				
-			}
-		})
-	}
 	
 	// YAHOO QUOTE
 	https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22YHOO%22%2C%22AAPL%22%2C%22GOOG%22%2C%22MSFT%22)&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=results
@@ -99,36 +70,6 @@ devmod.controller('devCtrl', ['$rootScope', '$scope', '$state', function ($rootS
 		});
 		
 	}
-
-
-	
-	
-	/*
-
-	var origdaycount = 3
-	var userenrolldateday = 4
-	var daycount = origdaycount
-	
-	if (userenrolldateday != 6 && userenrolldateday != 5 && origdaycount < 7 && origdaycount > 6 - userenrolldateday) { daycount = origdaycount - 2 };
-	//daycount = origdaycount;
-
-	console.log(daycount);
-
-	if (userenrolldateday == 6) {
-
-		daycount = daycount - 1 - (2 * Math.floor(origdaycount/7));
-		console.log(daycount);
-	} else if (userenrolldateday == 5) {
-		
-		daycount = daycount - 2 - (2 * Math.floor(origdaycount/7));
-		console.log(daycount);
-	} else if (userenrolldateday < 5) {
-		
-		daycount = daycount - (2 * Math.floor(origdaycount/7));
-		console.log(daycount);
-	};
-
-	console.log(daycount);*/
 
 	$scope.testBreakout = function() {
 

@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 
 var parseAdaptor = require('cloud/prerender-parse.js');
-app.use(require('cloud/prerenderio.js').setAdaptor(parseAdaptor(Parse)).set('prerenderToken','ZPJ5ACzdMQtFNj9i09YA'));
+app.use(require('cloud/prerenderio.js').setAdaptor(parseAdaptor(Parse)).set('prerenderToken','TOKEN HERE'));
 
 // Global app configuration section
 app.set('views', 'cloud/views');  // Specify the folder to find templates

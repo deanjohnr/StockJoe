@@ -1,6 +1,6 @@
 var moment = require('moment');
 var Mandrill = require('mandrill');
-Mandrill.initialize('GDVGFlsqFB9prQ-MjgwOeQ');
+Mandrill.initialize('MANDRILL KEY');
 
 // MASTER JOB
 Parse.Cloud.job("MasterJob", function(request, response) {

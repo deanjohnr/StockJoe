@@ -1,6 +1,6 @@
 'use strict'
 
-Parse.initialize("goMHhGWfr1mSHV71ZGIhveepd3PoUcZyBoP4Ox0g", "ZzbuLz6uaS6FI56xDRXRUcLQWKaNLHe0GAVsfgVU");
+Parse.initialize("ID HERE", "ID HERE");
 
 var myapp = angular.module('mainapp',[
 	'ui.router',
